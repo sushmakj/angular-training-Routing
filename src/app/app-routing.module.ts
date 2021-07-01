@@ -39,7 +39,10 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes)],
+    imports: [
+        // RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes,{useHash:true})//ignores prefix of url eg. #/server
+    ],
     exports: [RouterModule]
 })
 export class AppRoutingModule {
